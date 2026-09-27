@@ -1,25 +1,26 @@
 # Unrestricted Global Streaming using Windows PC, any gaming device, and any VPN
 Repository showing basic setup for global streaming using a gaming device, pc, and vpn to view max content available around geolocation blocking.
 
+</br>
 
 ![streaming_setup_diagram](screenshots/gaming_device_Streaming_setup.png)
 
+</br>
 
-## Steps for setting up global streaming using any gaming device, a Windows desktop computer, and NordVPN
-
+## Steps for Setup
 1. Connect desktop to the internet
-     - (preferably Wi‑Fi, so the Ethernet port stays free for the Xbox).
-2. Connect LAN cable: PC Ethernet port to Xbox.
-3. Open NordVPN on desktop.
+     - (preferably Wi‑Fi, so the Ethernet port stays free for the gaming device).
+2. Connect LAN cable: PC Ethernet port to Gaming Device.
+3. Open VPN on desktop (this walkthrough uses NordVPN because I got it for free).
      - In Settings, set the protocol to OpenVPN UDP or OpenVPN TCP (not NordLynx).
      - Then connect to a server.
-4. Right‑click the network icon on desktop
-    - Go to Network and Internet settings
-    - Then to Advanced network settings
+4. Right‑click the networking/wifi icon on desktop.
+    - Go to Network and Internet settings.
+    - Then to Advanced network settings.
     - Then More network adapter options.
        - You should see at least:
        - your Wi‑Fi
-       - Ethernet (the Xbox cable)
+       - Ethernet (the cable to gaming device)
        - a NordVPN adapter (OpenVPN Data Channel Offload for NordVPN or TAP-NordVPN)
 5. Right‑click the NordVPN adapter (OpenVPN Data Channel Offload for VPN) in the Network Connections window on desktop
     - Then go to Properties, Sharing tab.
@@ -46,8 +47,16 @@ Repository showing basic setup for global streaming using a gaming device, pc, a
 
 **The device is now connected to the region you have selected on your VPN.**
 
+## Disabling Setup
+- When unplugging connected device and not using computer for VPN host:
+     - Right-click the OpenVPN Data Channel Offload for VPN in the Network Connections window on desktop. Then go to Properties, Sharing.
+     - Uncheck Allow other network users to connect through this computer's Internet connection.
+     - Click ok.
+
+**Turn this back on when connecting device back to global streaming services**
+
 ## Some Notes
-- You do not need to do anything extra if you change regions on your vpn. You will only need to restart the app you are using to view content.
+- You do not need to do anything extra if you change regions on your VPN. You will only need to restart the app you are using to view content, so the content can correctly refresh.
 - Some content won't be available in all regions obviously, so if you change VPN regions while still in an app it will lock you out and tell you something like this content isn't available in your region.
      - If this happens just restart your app.
 
